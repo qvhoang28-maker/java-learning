@@ -4,13 +4,30 @@ import java.util.Scanner;
 
 public class HelloWorld {
 	public static void main(String[] args) {
+		System.out.println(">> LỰA CHỌN TÍNH NĂNG <<");
+		System.out.println("++ ------------- ++");
+		System.out.println("| 1. Cộng		|");
+		System.out.println("| 2. Trừ		|");
+		System.out.println("| 3. Kết thúc		|");
+		System.out.println("++ ------------- ++");
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("FN = " + Math.sqrt(49));
-		int firstNum = scanner.nextInt();
+		System.out.println("Lựa chọn của bạn là: ");
 
-		System.out.print("SN = ");
-		int secondNum = scanner.nextInt();
-		System.out.println("Min = " + Math.min(firstNum, secondNum));
-
+		int value = scanner.nextInt();
+		switch (value) {
+		case 1:
+			System.out.println("Bạn đã lựa chọn phép cộng");
+			break;
+		case 2:
+			System.out.println("Bạn đã lựa chọn phép trừ");
+			break;
+		case 3:
+			System.out.println("Bạn đã lựa chọn thoát chương trình");
+			break;
+		default:
+			System.out.println("Lựa chọn không hợp lệ");
+			System.exit(0);
+		}
+		scanner.close();
 	}
 }
